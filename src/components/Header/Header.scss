@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  margin: 10px 0;
+  &__logo {
+    margin-top: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__categories {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+
+    & li {
+      margin: 0 auto;
+      padding-top: 22px;
+      width: 100px;
+      text-align: center;
+      height: 100%;
+      transition: all 0.1s;
+      cursor: pointer;
+      user-select: none;
+      color: var(--teal);
+      border-radius: 10%;
+
+      &:hover {
+        background-color: var(--gray);
+        color: var(--dark);
+      }
+    }
+  }
+}
