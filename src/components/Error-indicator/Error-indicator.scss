@@ -1,0 +1,15 @@
+.error-indicator {
+  width: 100%;
+  text-align: center;
+
+  & span {
+    display: block;
+    color: coral;
+    font-size: 22px;
+  }
+
+  &__title {
+    font-size: 30px !important;
+    font-weight: bold;
+  }
+}
