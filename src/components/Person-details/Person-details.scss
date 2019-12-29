@@ -1,13 +1,14 @@
 .person-details {
   display: flex;
-  margin-top: 20px;
   flex-direction: row;
   padding: 20px;
+  width: 60%;
 
   &__image {
-    width: 30%;
-    height: 30%;
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
+    object-fit: contain;
   }
 
   & .list-group-item {
@@ -16,5 +17,12 @@
     & .term {
       margin-right: 10px;
     }
+  }
+
+  &__select {
+    margin: 0 auto;
+    font-size: 30px;
+    color: coral;
+    padding-top: 3rem;
   }
 }

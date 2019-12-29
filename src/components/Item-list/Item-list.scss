@@ -1,8 +1,13 @@
 .item-list .list-group-item {
   cursor: pointer;
   transition: all 0.1s;
+  text-align: center;
 }
 
 .item-list .list-group-item:hover {
   background-color: #444;
+}
+
+.item-list {
+  width: 35%;
 }
