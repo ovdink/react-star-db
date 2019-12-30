@@ -9,6 +9,10 @@
     margin-left: 10px;
     cursor: pointer;
     user-select: none;
+
+    &:hover {
+      color: var(--teal);
+    }
   }
 
   &__categories {

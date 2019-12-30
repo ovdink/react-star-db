@@ -10,7 +10,8 @@ export default class RandomPlanet extends Component {
 
   state = {
     planet: {},
-    loading: true
+    loading: true,
+    error: false
   };
 
   componentDidMount() {
@@ -25,11 +26,12 @@ export default class RandomPlanet extends Component {
   }
 
   onPlanetLoaded = (planet) => {
-    this.setState({ planet, loading: false, error: false });
+    this.setState({ planet, loading: false });
   };
 
-  onError = (err) => {
-    this.setState({ error: true, loading: false });
+  onError = () => {
+    const currentState = this.state.error;
+    this.setState({ error: !currentState, loading: false });
   };
 
   updatePlanet() {
@@ -54,6 +56,12 @@ export default class RandomPlanet extends Component {
         {errorMessage}
         {spinner}
         {content}
+        <button
+          className="btn btn-danger fake-error"
+          onClick={() => this.onError()}
+        >
+          Toggle Error
+        </button>
       </div>
     );
   }
@@ -67,7 +75,7 @@ const PlanetView = ({ planet }) => {
         className="random-planet__image"
         src={`https://starwars-visualguide.com/assets/img/planets/${id}.jpg`}
       />
-      <div>
+      <div className="random-planet__info">
         <h4>{name}</h4>
         <ul className="list-group list-group-flush">
           <li className="list-group-item">

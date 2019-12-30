@@ -1,6 +1,7 @@
 .random-planet {
   display: flex;
   padding: 20px;
+  position: relative;
 
   &__image {
     width: 30%;
@@ -20,4 +21,15 @@
       }
     }
   }
+
+  &__info {
+    width: 40%;
+  }
+}
+
+.fake-error {
+  position: absolute;
+  right: 0;
+  height: 70px;
+  margin-right: 20px;
 }
