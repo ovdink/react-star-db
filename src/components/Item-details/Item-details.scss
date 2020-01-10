@@ -1,12 +1,13 @@
-.person-details {
+.item-details {
   display: flex;
   flex-direction: row;
   padding: 20px;
   width: 60%;
 
   &__image {
-    max-width: 100%;
-    height: auto;
+    // max-width: 100%;
+    // height: auto;
+    width: 50%;
     border-radius: 10px;
     object-fit: contain;
   }
