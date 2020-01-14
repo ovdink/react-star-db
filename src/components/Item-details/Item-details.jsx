@@ -18,6 +18,7 @@ export default class ItemDetails extends Component {
   };
 
   componentDidMount() {
+    console.log(this.props);
     this.updateItem();
   }
 

@@ -4,10 +4,10 @@ import Header from '../Header';
 import Row from '../Row';
 import RandomPlanet from '../Random-planet';
 
-// import PeoplePage from '../People-page';
 import SwapiService from '../../services/swapi-service';
+import { SwapiServiceProvider } from '../swapi-service-context';
+import ItemDetails, { Record } from '../Item-details';
 
-//
 import {
   PersonDetails,
   PlanetDetails,
@@ -16,8 +16,6 @@ import {
   PlanetList,
   StarshipList
 } from '../sw-components';
-import ItemDetails, { Record } from '../Item-details';
-//
 
 import './App.scss';
 
@@ -67,14 +65,19 @@ export default class App extends Component {
     );
 
     return (
-      <div className="App">
-        <div className="container">
-          <Header />
-          <Row left={<PersonDetails itemId={11} />} right={<PersonList />} />
-          <Row left={<PlanetDetails itemId={9} />} right={<PlanetList />} />
-          <Row left={<StarshipDetails itemId={5} />} right={<StarshipList />} />
+      <SwapiServiceProvider value={this.swapiService}>
+        <div className="App">
+          <div className="container">
+            <Header />
+            <Row left={<PersonDetails itemId={11} />} right={<PersonList />} />
+            <Row left={<PlanetDetails itemId={9} />} right={<PlanetList />} />
+            <Row
+              left={<StarshipDetails itemId={5} />}
+              right={<StarshipList />}
+            />
+          </div>
         </div>
-      </div>
+      </SwapiServiceProvider>
     );
   }
 }
