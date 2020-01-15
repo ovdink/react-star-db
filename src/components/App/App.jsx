@@ -22,7 +22,7 @@ export default class App extends Component {
         <div className="App">
           <div className="container">
             <Header />
-            <RandomPlanet />
+            <RandomPlanet updateInterval={3000} />
             <PeoplePage />
             <PlanetsPage />
             <StarshipsPage />
