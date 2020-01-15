@@ -26,12 +26,12 @@ const mapPersonMethodsToProps = (swapiService) => {
 };
 const mapPlanetsMethodsToProps = (swapiService) => {
   return {
-    getData: swapiService.getAllPeople
+    getData: swapiService.getAllPlanets
   };
 };
 const mapStarshipsMethodsToProps = (swapiService) => {
   return {
-    getData: swapiService.getAllPeople
+    getData: swapiService.getAllStarships
   };
 };
 
