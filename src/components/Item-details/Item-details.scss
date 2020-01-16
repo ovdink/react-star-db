@@ -1,13 +1,13 @@
 .item-details {
-  display: flex;
-  flex-direction: row;
   padding: 20px;
-  width: 60%;
+  width: 100%;
+  text-align: center;
 
   &__image {
     width: 50%;
     border-radius: 10px;
     object-fit: contain;
+    margin: 0 auto;
   }
 
   & .list-group-item {

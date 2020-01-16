@@ -10,9 +10,11 @@
     margin-left: 10px;
     cursor: pointer;
     user-select: none;
+    color: #fff;
 
     &:hover {
       color: var(--teal);
+      text-decoration: none !important;
     }
   }
 
@@ -40,5 +42,9 @@
         color: var(--dark);
       }
     }
+  }
+
+  & a:hover {
+    text-decoration: none !important;
   }
 }

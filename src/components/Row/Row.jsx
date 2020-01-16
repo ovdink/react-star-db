@@ -5,9 +5,9 @@ import './Row.scss';
 
 const Row = ({ left, right }) => {
   return (
-    <div className="d-flex justify-content-between flex-container row">
-      {left}
-      {right}
+    <div className="row mb2">
+      <div className="col-md-6">{left}</div>
+      <div className="col-md-6">{right}</div>
     </div>
   );
 };
