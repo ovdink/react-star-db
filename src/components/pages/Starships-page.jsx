@@ -3,7 +3,12 @@ import { StarshipList } from '../sw-components';
 import { withRouter } from 'react-router-dom';
 
 const StarhipsPage = ({ history }) => {
-  return <StarshipList onItemSelected={(id) => history.push(id)} />;
+  return (
+    <>
+      <h2>Starships</h2>
+      <StarshipList onItemSelected={(id) => history.push(id)} />
+    </>
+  );
 };
 
 export default withRouter(StarhipsPage);

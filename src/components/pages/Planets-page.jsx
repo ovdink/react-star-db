@@ -6,10 +6,13 @@ import { PlanetDetails, PlanetList } from '../sw-components';
 const PlanetPage = ({ history, match }) => {
   const { id } = match.params;
   return (
-    <Row
-      left={<PlanetList onItemSelected={(id) => history.push(id)} />}
-      right={<PlanetDetails itemId={id} />}
-    />
+    <>
+      <h2>Planets</h2>
+      <Row
+        left={<PlanetList onItemSelected={(id) => history.push(id)} />}
+        right={<PlanetDetails itemId={id} />}
+      />
+    </>
   );
 };
 

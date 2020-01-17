@@ -26,11 +26,8 @@
     height: 100%;
 
     & li {
-      margin: 0 auto;
-      padding-top: 22px;
-      width: 100px;
       text-align: center;
-      height: 100%;
+      padding: 24px 10px;
       transition: all 0.1s;
       cursor: pointer;
       user-select: none;
